@@ -1,4 +1,4 @@
-package pl.rpieja.automata;
+package pl.rpieja.automata.singleDim;
 
 import processing.core.PApplet;
 
@@ -88,6 +88,6 @@ public class Automaton extends PApplet {
     }
 
     public static void main(String[] args) {
-        PApplet.main("pl.rpieja.automata.Automaton");
+        PApplet.main("pl.rpieja.automata.singleDim.Automaton");
     }
 }
