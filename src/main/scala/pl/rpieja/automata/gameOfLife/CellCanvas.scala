@@ -48,5 +48,4 @@ class CellCanvas extends Canvas {
         plotCell(x, y)
     }
   }
-
 }
