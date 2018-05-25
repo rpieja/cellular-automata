@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.rpieja.automata.naiveGrainGrowth.NaiveGrainGrowthController">
+   <left>
+      <VBox prefHeight="1000.0" prefWidth="300.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField promptText="x" />
+            <TextField promptText="y" />
+            <Separator prefWidth="200.0" />
+            <Label text="Neighbourhood mode:" />
+            <RadioButton id="radioMoore" mnemonicParsing="false" text="Moore">
+               <toggleGroup>
+                  <ToggleGroup fx:id="neighbourhoodTypeToggleGroup" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="radioVonNeumann" mnemonicParsing="false" text="Von Neumann" toggleGroup="$neighbourhoodTypeToggleGroup" />
+            <RadioButton fx:id="radioHex-left" mnemonicParsing="false" text="Hexagonal Left" toggleGroup="$neighbourhoodTypeToggleGroup" />
+            <RadioButton fx:id="radio-hex-right" mnemonicParsing="false" text="Hexagonal Right" toggleGroup="$neighbourhoodTypeToggleGroup" />
+            <RadioButton fx:id="radio-hex-random" mnemonicParsing="false" text="Hexagonal Random" toggleGroup="$neighbourhoodTypeToggleGroup" />
+            <RadioButton fx:id="radio-pent-random" mnemonicParsing="false" text="Pentagonal Random" toggleGroup="$neighbourhoodTypeToggleGroup" />
+            <Separator prefWidth="200.0" />
+            <CheckBox mnemonicParsing="false" text="PBC" />
+            <Separator prefWidth="200.0" />
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <Canvas fx:id="mainCanvas" height="980.0" width="1580.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin></Canvas>
+   </center>
+</BorderPane>

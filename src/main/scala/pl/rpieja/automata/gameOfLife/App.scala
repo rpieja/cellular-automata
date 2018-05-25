@@ -13,7 +13,7 @@ import scalafx.scene.{Group, Scene}
 import scalafx.util.Duration
 import pl.rpieja.automata.gameOfLife.Cell
 
-object Main extends JFXApp {
+object App extends JFXApp {
 
   val cellCanvas = new CellCanvas
   cellCanvas.enablePlotting()
@@ -21,8 +21,8 @@ object Main extends JFXApp {
   stage = new PrimaryStage {
 
     title = "Game of Life"
-    width = 1024
-    height = 768
+    width = 800
+    height = 600
     resizable = false
 
     scene = new Scene {
